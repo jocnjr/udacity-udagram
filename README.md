@@ -25,3 +25,11 @@ devops engineer project 2
 ```
 ./update.sh udagram-services services.yaml services-params.json
 ```
+
+### don't forget
+
+In order to execute the bash scripts you have to setup the right permissions
+
+```
+chmod +x create.sh update.sh
+```
