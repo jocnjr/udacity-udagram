@@ -70,7 +70,6 @@ Resources:
           aws s3 cp ${S3PathToZip} .
           unzip -o udagram.zip
       ImageId: ami-09211c0443ccbcb9e
-      KeyName: joc-spitfire
       SecurityGroups:
         - Ref: WebServerSecGroup
       InstanceType: t3.medium
