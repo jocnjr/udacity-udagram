@@ -14,7 +14,7 @@ Parameters:
     Description: KeyName for bastion
     Type: String
 Resources:
-  InstanceProfileRole:
+  EC2S3Role:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Roles:
@@ -135,6 +135,7 @@ Resources:
   BastionInstance:
     Type: AWS::EC2::Instance
     Properties:
+      IamInstanceProfile: !Ref "EC2S3Role"
       InstanceType: t2.micro
       ImageId: ami-0a07be880014c7b8e
       KeyName:
